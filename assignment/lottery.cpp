@@ -20,11 +20,11 @@
 
 bool 	init_lottery (const char *csv_file, char csv_separator)
 {
-  return true;
+  return fopen(csv_file, "r") != 0;
 }
 bool 	get_tip (int tip_number, int tip[TIP_SIZE])
 {
-  return true;
+  return false;
 }
 bool 	set_drawing (int drawing_numbers[TIP_SIZE])
 {
