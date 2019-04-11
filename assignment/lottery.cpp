@@ -17,10 +17,12 @@
 #define 	UUID_LEN   40
 #define 	MAX_TIP_LEN   17
 #define 	MAX_LINE_LEN   (UUID_LEN + 1 + MAX_TIP_LEN + 1)
+static FILE* fd;
 
 bool 	init_lottery (const char *csv_file, char csv_separator)
 {
-  return fopen(csv_file, "r") != 0;
+  fd = fopen(csv_file,"r");
+  return fd != 0;
 }
 bool 	get_tip (int tip_number, int tip[TIP_SIZE])
 {
